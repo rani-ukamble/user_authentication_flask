@@ -119,7 +119,7 @@ python-dotenv==0.20.0
 pytweening==1.2.0
 pytz==2024.1
 pywhatkit==5.4
-pywin32==306
+
 PyYAML==6.0.1
 ratelim==0.1.6
 requests==2.32.3
