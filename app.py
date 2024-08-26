@@ -22,9 +22,9 @@ def get_db_connection():
     return mysql.connector.connect(**db_config)
 
 @app.route('/')
-def home():
+def index():
     if 'username' in session:
-        return render_template('home.html', username=session['username'])
+        return render_template('index.html', username=session['username'])
     return redirect(url_for('login'))
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -76,7 +76,7 @@ def login():
             flash('Login successful!')
             cursor.close()
             conn.close()
-            return redirect(url_for('home'))
+            return redirect(url_for('index'))
         else:
             flash('Invalid credentials! Please try again.')
             cursor.close()
