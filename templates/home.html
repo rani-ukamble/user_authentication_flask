@@ -1,0 +1,43 @@
+<style>
+    .logout-link {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+
+    .logout-link:hover {
+        color: #0056b3;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .full-width-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-container {
+        text-align: center;
+        padding: 20px;
+    }
+</style>
+
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+<div class="content-container">
+    <h2>Welcome, {{ username }}!</h2>
+</div>
+<img src="{{ url_for('static', filename='aaa.webp') }}" alt="Welcome Image" class="full-width-image">
+
+
+{% endblock %}
